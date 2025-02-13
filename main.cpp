@@ -50,16 +50,12 @@ static double MultiplyBenchmark() {
         auto& densities = block.GetElementalData().Get(Kratos::DENSITY);
         for(int i = 0 ; i < block.size() ; i++) {
             conductivities[i] = 100; 
-            densities[i] = 1000; // 2700 is the density of aluminum
+            densities[i] = 1000; 
         }
     }
     const int number_of_nodes = mesh.Size() * (N + 1) * (N + 1) * (N + 1);
     std::cout << int(number_of_nodes/1e6) << "M\t\t";
     std::vector<double> x_vector(number_of_nodes, 1.0);
-    // add perturmbation to x_vector
-    // for(int i = 0 ; i < number_of_nodes ; i+=2) {
-    //     x_vector[i] =-1.0;
-    // }
 
     ProcessInfo process_info;
     std::vector<double> rhs_vector(number_of_nodes, 0.0);
