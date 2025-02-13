@@ -396,7 +396,7 @@ static double MultiplyBenchmark() {
     const int size = 256 / N;
     double element_size = 0.216; // 0.1 is the size of the domain
     const std::array<double, 3> min_point = {-0.1, -0.1, -0.1};
-    VoxelMesh<VoxelBlock<ThermalVoxelBlockNodalData, ThermalVoxelBlockElementalData, N>> mesh(min_point,element_size,size, size, size);
+    VoxelBlockMesh<VoxelBlock<ThermalVoxelBlockNodalData, ThermalVoxelBlockElementalData, N>> mesh(min_point,element_size,size, size, size);
     Formulation<decltype(mesh)> formulation(mesh);
     // seting the conductivity
     for (auto& block : mesh) {
