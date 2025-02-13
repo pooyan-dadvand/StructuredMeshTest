@@ -8,10 +8,10 @@
 #include <unordered_map>
 #include <iomanip>
 
-#include "thermal_voxel_block_nodal_data.h"
-#include "thermal_voxel_block_elemental_data.h"
-#include "voxel_block.h"
-#include "voxel_mesh.h"
+#include "includes/thermal_voxel_block_nodal_data.h"
+#include "includes/thermal_voxel_block_elemental_data.h"
+#include "includes/voxel_block.h"
+#include "includes/voxel_mesh.h"
 
 class Timer {
 public:
