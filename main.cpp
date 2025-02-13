@@ -11,8 +11,7 @@
 #include "includes/thermal_voxel_block_nodal_data.h"
 #include "includes/thermal_voxel_block_elemental_data.h"
 #include "includes/voxel_block.h"
-#include "includes/voxel_mesh.h"
-
+#include "includes/voxel_block_mesh.h" 
 class Timer {
 public:
     Timer() : mStart(std::chrono::high_resolution_clock::now()) {}
